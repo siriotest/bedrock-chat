@@ -51,7 +51,7 @@ const ENABLE_LAMBDA_SNAPSTART: boolean = app.node.tryGetContext("enableLambdaSna
 const waf = new FrontendWafStack(app, `FrontendWafStack`, {
   env: {
     // account: process.env.CDK_DEFAULT_ACCOUNT,
-    region: "us-east-1",
+    region: "eu-central-1",
   },
   allowedIpV4AddressRanges: ALLOWED_IP_V4_ADDRESS_RANGES,
   allowedIpV6AddressRanges: ALLOWED_IP_V6_ADDRESS_RANGES,

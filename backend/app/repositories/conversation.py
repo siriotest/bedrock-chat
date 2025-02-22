@@ -32,7 +32,7 @@ logger.setLevel(logging.DEBUG)
 THRESHOLD_LARGE_MESSAGE = 300 * 1024  # 300KB
 LARGE_MESSAGE_BUCKET = os.environ.get("LARGE_MESSAGE_BUCKET")
 
-BEDROCK_REGION = os.environ.get("BEDROCK_REGION", "us-east-1")
+BEDROCK_REGION = os.environ.get("BEDROCK_REGION", "eu-central-1")
 s3_client = boto3.client("s3", BEDROCK_REGION)
 
 
