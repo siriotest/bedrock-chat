@@ -33,7 +33,7 @@ if TYPE_CHECKING:
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
-BEDROCK_REGION = os.environ.get("BEDROCK_REGION", "us-east-1")
+BEDROCK_REGION = os.environ.get("BEDROCK_REGION", "eu-central-1")
 ENABLE_MISTRAL = os.environ.get("ENABLE_MISTRAL", "false") == "true"
 DEFAULT_GENERATION_CONFIG = (
     DEFAULT_MISTRAL_GENERATION_CONFIG
@@ -279,10 +279,6 @@ def get_model_id(
         "mistral-7b-instruct": "mistral.mistral-7b-instruct-v0:2",
         "mixtral-8x7b-instruct": "mistral.mixtral-8x7b-instruct-v0:1",
         "mistral-large": "mistral.mistral-large-2402-v1:0",
-        # New Amazon Nova models
-        "amazon-nova-pro": "amazon.nova-pro-v1:0",
-        "amazon-nova-lite": "amazon.nova-lite-v1:0",
-        "amazon-nova-micro": "amazon.nova-micro-v1:0",
     }
 
     # Ref: https://docs.aws.amazon.com/bedrock/latest/userguide/cross-region-inference-support.html
